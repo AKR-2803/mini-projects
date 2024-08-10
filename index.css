@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+    /* Ensures padding and border are included in element's total width and height */
+}
+
+:root {
+    --primary-color: #e4c191;
+    --secondary-color: #fceff1;
+    --text-color: brown;
+    --border-color: #cccccc;
+    --font-main: 'YS';
+    --font-secondary: 'Outfit', 'sans-serif';
+}
+
+
+@font-face {
+    font-family: 'YS';
+    src: url('assets/fonts/young-serif/YoungSerif-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Outfit';
+    /* Defines custom font 'Outfit' */
+    src: url('assets/fonts/outfit/Outfit-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--primary-color);
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 650px;
+    margin: 50px auto;
+    border-radius: 15px;
+    background-color: white;
+    padding: 20px;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+.font-color-brown {
+    color: var(--text-color);
+}
+
+.font-outfit {
+    font-family: 'Outfit', 'sans-serif';
+    /* Sets font to 'Outfit' with fallback to sans-serif */
+}
+
+.menu img {
+    border-radius: 10px;
+}
+
+section {
+    margin: 15px 0;
+}
+
+p {
+    margin-top: 0;
+}
+
+.preparation-section {
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    padding-left: 15px;
+}
+
+ul,
+ol {
+    padding-left: 35px;
+    /* Adjusts left padding for unordered lists */
+}
+
+ul li:not(:last-child),
+ol li:not(:last-child) {
+    margin-bottom: 10px;
+    /* Adds bottom margin except for the last item */
+}
+
+ul li,
+ol li {
+    list-style-position: outside;
+    /* Positions list markers outside the list items */
+    padding-left: 15px;
+    font-family: 'Outfit', 'sans-serif';
+}
+
+ol li::marker {
+    color: brown;
+    font-weight: bold;
+}
+
+h2 {
+    margin: 0;
+}
+
+hr {
+    width: 100%;
+    background-color: var(--border-color);
+    height: 1px;
+    border: none;
+}
+
+table {
+    border-collapse: collapse;
+    /* Collapses table borders into a single border */
+    width: 100%;
+}
+
+td {
+    border-top: 1.5px solid var(--border-color);
+    border-bottom: 1.5px solid var(--border-color);
+    border-left: none;
+    border-right: none;
+    padding: 10px;
+    /* Padding inside table cells */
+}
+
+td:nth-of-type(2) {
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+tr:first-child td {
+    border-top: none;
+    /* Removes top border from the first row */
+}
+
+tr:last-child td {
+    border-bottom: none;
+    /* Removes bottom border from the last row */
+}
+
+.attribution {
+    text-align: center;
+}
